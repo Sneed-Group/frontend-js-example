@@ -1,18 +1,26 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>FrontendJS Example</title>
 </head>
-<body>
 <script src="frontend.js"></script>
 <script>
+initBody()
 clearPage()
-let firstH1 = createElement("h1", "h1-1")
-writeText("h1-1", "Hello, world")
-createParagraph("paragraph1", `This is an example of how to properly use Frontend JS.
-Also it's a test if things are working.`)
+writeHTML("body", markdownToHTML(`# Hello world!
+
+This is an example of how to properly use Frontend JS.
+Also it's a test if things are working.
+
+* Air
+* Water
+* Fire
+* Dirt
+* ####ing magnets, how do they work!?!
+`))
+createParagraph("paragraphLorum", `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar nisl eu risus tincidunt, non aliquet metus tempor. Duis ac tortor commodo, venenatis leo at, consectetur nulla.`)
 let dino = createButton("dino", "dino sound")
 changeAttributes(dino, {"onclick": "playAudio(`https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3`, 0.4)"})
 </script>
-</body>
 </html>
